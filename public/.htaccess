@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^([^\.]+)$ $1.php [NC,L]
+        RewriteRule ^title/([a-zA-Z0-9]+) index.php?title=$1
+</IfModule>

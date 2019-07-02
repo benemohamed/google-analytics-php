@@ -1,0 +1,57 @@
+{
+    "name": "benemohamed/analytics",
+    "description": "Google Analytics library for PHP",
+    "keywords": ["Google", "Analytics", "library"],
+    "type": "library",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/benemohamed",
+    "authors": [{
+        "name": "Mohamed Ben rebia",
+        "email": "mohamed@ipfinder.io",
+        "homepage": "https://github.com/benemohamed",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": "^7.1",
+        "ext-gmp": "*",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": "^6.3",
+        "ipfinder/ipfinder": "^1.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4.2",
+        "phpunit/phpunit": "^8.2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "benemohamed\\analytics\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "benemohamed\\analytics\\tests\\": "tests/"
+        }
+    },
+    "suggest": {
+        "ext-gmp": "Provides support for uuid ",
+        "ext-json": "Provides support for ipfinder and guzzle "
+    },
+    "scripts": {
+        "test": "phpunit --verbose --colors=always",
+        "format" : "phpcbf --colors -p --standard=PSR2 src/ tests/",
+        "check"  : "phpcs --colors -p --standard=PSR2 src/ tests/"
+
+    },
+    "scripts-descriptions": {
+        "test": "Run all tests"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-1.0": "1.0.x-dev"
+        }
+    }
+}
